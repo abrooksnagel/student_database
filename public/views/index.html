@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>J'Lazer! Team!</title>
+    <script src="vendors/angular.min.js"></script>
+    <script src="assets/client.js"></script>
+</head>
+<body ng-controller="MainController">
+    <h1>{{message}}</h1>
+    <div class="form" ng-controller="assController">
+        <p>Student Name: <input type="text" ng-model="assignment.name"/></p>
+        <p>Assignment Number: <input type="number" ng-model="assignment.number"/></p>
+        <p>Score: <input type="number" ng-model="assignment.score"/></p>
+        <p>Date: <input type="date" ng-model="assignment.date"/></p>
+        <p>Pass:
+            <select ng-model="assignment.pass">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+            </p>
+        <p><button class="submit" ng-click="submitData(data)">Submit</button></p>
+    </div>
+
+</body>
+</html>
